@@ -31,3 +31,23 @@ function Get-ServerData {
     }
 }
 
+$Input = @{
+    "Foo"=@(
+        "Bar","Baz"
+    )
+}
+
+$Output = @(
+
+)
+Function Test-Flatten {
+    param(
+        $InputObject
+    )
+    begin{
+        $Output= @()
+    }
+    process{
+
+    }
+}

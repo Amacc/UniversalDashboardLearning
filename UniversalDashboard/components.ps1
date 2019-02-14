@@ -50,7 +50,6 @@ Function Get-ServerDetailComponent {
             New-UDInputAction -Content @(
                 Get-ServerDetailComponent
                 Get-ServerInformationComponent $ModuleName
-                # New-UDCard -Title "$ModuleName - $($Module.Version)" -Text $Module.Description
             )
         }
     }
@@ -62,7 +61,7 @@ Function Get-ServerFileInformationComponent {
     )
     process{
         New-UDTable -Title "Directory Information" `
-            -Headers @("Name", "Value") `
+            -Headers @("Name", "FullName") `
             -Endpoint {
                 Get-ChildItem -Path $FilePath |
                     ForEach-Object{@{
